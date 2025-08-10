@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Typography Classes */
+.font-heading {
+  font-family: 'Poppins', 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+}
+
+.font-body {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Monaco', 'Menlo', monospace;
+}
+
+.font-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.font-display {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* Improved text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'pnum' 1, 'tnum' 0, 'onum' 1, 'lnum' 0, 'dlig' 1;
+  text-rendering: optimizeLegibility;
+}
+
+/* Number rendering for financial data */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Enhanced readability for long text */
+.text-readable {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-orange-200::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thumb-orange-200::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px;
+}
+
+.scrollbar-thumb-orange-200::-webkit-scrollbar-thumb {
+  background: rgb(254 215 170);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-thumb-orange-200:hover::-webkit-scrollbar-thumb,
+.scrollbar-thumb-orange-300::-webkit-scrollbar-thumb {
+  background: rgb(253 186 116);
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Smooth scrolling behavior */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Custom scroll area styling */
+.nav-scroll-area {
+  scrollbar-gutter: stable;
+}
+
+.nav-scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.nav-scroll-area::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin: 4px 0;
+}
+
+.nav-scroll-area::-webkit-scrollbar-thumb {
+  background: rgba(251, 146, 60, 0.3);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.nav-scroll-area:hover::-webkit-scrollbar-thumb {
+  background: rgba(251, 146, 60, 0.5);
+}
+
+.nav-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 146, 60, 0.7);
+}
+
+/* Firefox scrollbar styling */
+.nav-scroll-area {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(251, 146, 60, 0.3) transparent;
+}
+
+/* Improved modal and scroll behavior */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Prevent body scroll when modal is open */
+.modal-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Credit payment scroll container */
+.credit-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+
+.credit-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.credit-scroll-container::-webkit-scrollbar-track {
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 3px;
+}
+
+.credit-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.credit-scroll-container:hover::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+/* Better click protection during loading */
+.processing-overlay {
+  pointer-events: auto !important;
+  cursor: not-allowed;
+}
+
+.processing-overlay * {
+  pointer-events: none;
+}
+
+/* Improved focus states */
+.focus-ring:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Better disabled state styling */
+.disabled-state {
+  opacity: 0.6;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.disabled-state:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Compact layout utilities */
+.compact-layout {
+  gap: 0.25rem;
+}
+
+.minimal-padding {
+  padding: 0.125rem 0.25rem;
+}

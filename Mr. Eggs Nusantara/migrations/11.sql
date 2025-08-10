@@ -1,0 +1,13 @@
+
+CREATE TABLE app_users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  mocha_user_id TEXT NOT NULL UNIQUE,
+  email TEXT NOT NULL,
+  name TEXT NOT NULL,
+  role TEXT NOT NULL DEFAULT 'staff', 
+  phone TEXT,
+  is_active BOOLEAN DEFAULT 1,
+  last_login_at DATETIME,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
